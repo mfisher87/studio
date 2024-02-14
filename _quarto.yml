@@ -1,0 +1,45 @@
+project:
+  type: "website"
+
+
+website:
+  title: "Fisher Home Studio"
+  site-url: "https://mfisher87.github.io/studio"
+  # site-path: "/studio"  # Needed?
+
+  repo-url: &repo-url "https://github.com/mfisher87/studio"
+  repo-actions:
+    - "edit"
+    - "source"
+    - "issue"
+
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    left: "&copy; 2023"
+
+  sidebar:
+    style: "docked"
+    # background: "dark"
+    search: true
+    tools:
+      - icon: "github"
+        href: *repo-url
+    contents:
+      - text: "🎉 Changes"
+        href: "changes/index.md"
+      - text: "💡 Ideas"
+        href: "ideas/index.md"
+      - text: "---"
+      - text: "How to"
+        href: "how-to/index.md"
+        # contents: "how-to/*.md"
+
+
+format:
+  html:
+    theme:
+      dark: ["darkly", "styles.scss"]
+      light: ["flatly", "styles.scss"]
+    toc: true
+    # Turn on emoji shortcodes:
+    from: "markdown+emoji"
